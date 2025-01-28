@@ -1,0 +1,62 @@
+.about_me {
+  display: flex;
+  align-items: center;
+  height: 90vh;
+  width: 40%;
+  font-weight: 700;
+}
+.about_me__container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: relative;
+  height: 40vh;
+}
+.about_me__circle {
+  position: absolute;
+  left: 0;
+  top: -2%;
+  background-color: #ffa501;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  z-index: -10;
+}
+.about_me p {
+  line-height: 24px;
+}
+.about_me h1 {
+  font-size: 3rem;
+  line-height: 3.75rem;
+}
+.about_me__actions {
+  margin-top: 1.5rem;
+}
+.about_me__actions button {
+  background-color: #ffa501;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  border: none;
+  padding: 1rem 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.about_me__actions button:hover {
+  opacity: 0.7;
+}
+.about_me__actions a {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-left: 1rem;
+}
+@media (max-width: 480px) {
+  .about_me {
+    width: 100%;
+  }
+  .about_me h1 {
+    font-size: 1.625rem;
+    line-height: 2.5rem;
+  }
+}
+
+/*# sourceMappingURL=about_me.css.map */

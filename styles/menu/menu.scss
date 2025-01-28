@@ -1,0 +1,153 @@
+@use "../variables/variables.scss" as *;
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.7);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.4s ease;
+	z-index: 1000;
+}
+
+.menu {
+	position: fixed;
+	left: 0;
+	right: 80%;
+	top: 0;
+	bottom: 0;
+	background-color: $light-orange;
+	display: grid;
+	grid-template-rows: 1fr 7fr;
+	opacity: 0;
+	transform: translateX(-100%);
+	transition: transform 0.6s ease, opacity 0.4s ease;
+	pointer-events: none;
+	z-index: 10000;
+
+	&.open {
+		transform: translateX(0);
+		opacity: 1;
+		pointer-events: auto;
+
+		~ .overlay {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+
+	&__options {
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: 2.25rem;
+		list-style-type: none;
+		color: white;
+
+		li {
+			position: relative;
+			padding-left: 1.5rem;
+			margin-top: 1rem;
+			cursor: pointer;
+			width: 60%;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 15px;
+				height: 15px;
+				border-radius: 50%;
+				background-color: transparent;
+				border: 1px solid black;
+			}
+
+			&:hover {
+				box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.1);
+			}
+		}
+	}
+
+	&__social-media {
+		position: absolute;
+		bottom: 5%;
+		left: 50%;
+		transform: translateX(-50%);
+
+		img {
+			width: 20px;
+			margin: 0px 5px;
+			cursor: pointer;
+		}
+	}
+
+	&__close-image {
+		position: absolute;
+		right: 2%;
+		top: 1%;
+		cursor: pointer;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.menu {
+		right: 70%;
+
+		&__options {
+			font-size: 1.5rem;
+			line-height: 2.25rem;
+
+			li {
+				width: 70%;
+			}
+		}
+
+		&__social-media img {
+			width: 25px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.menu {
+		right: 50%;
+
+		&__close-image {
+			width: 40px;
+		}
+
+		&__options {
+			font-size: 1.25rem;
+			line-height: 1.75rem;
+
+			li {
+				width: 80%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.menu {
+		right: 15%;
+
+		&__options {
+			font-size: 1.5rem;
+			line-height: 2.25rem;
+
+			li {
+				width: 80%;
+				padding-left: 2rem;
+			}
+		}
+
+		&__close-image {
+			top: 0.5rem;
+			right: 1rem;
+		}
+	}
+}

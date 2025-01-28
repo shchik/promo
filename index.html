@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="./styles/general/general.css" />
+		<link rel="stylesheet" href="./styles/promo/promo.css" />
+		<link rel="stylesheet" href="./styles/about_me/about_me.css" />
+		<link rel="stylesheet" href="./styles/menu/menu.css" />
+		<link rel="stylesheet" href="./styles/benefit/benefit.css" />
+		<link rel="stylesheet" href="./styles/contacts/contacts.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>My Promo</title>
+	</head>
+	<body>
+		<div class="promo">
+			<div class="promo__background-image"></div>
+			<div class="promo__social-media">
+				<p>Социальные сети</p>
+				<div class="promo__social-media-line"></div>
+				<div class="promo__social-media-examples">
+					<img src="./images/social-media/github.png" />
+					<img src="./images/social-media/instagram.png" />
+					<img src="./images/social-media/facebook.png" />
+				</div>
+			</div>
+			<img
+				src="./images/promo-images/menu.png"
+				class="promo__open-menu"
+				id="open_menu"
+			/>
+		</div>
+
+		<div class="menu" id="menu">
+			<img
+				src="./images/promo-images/close.png"
+				class="menu__close-image"
+				id="close_menu"
+			/>
+			<div></div>
+			<ul class="menu__options">
+				<li>ПРО МЕНЯ</li>
+				<li>МОЙ ОПЫТ</li>
+				<li>МОИ НАВЫКИ</li>
+				<li>МОИ РАБОТЫ</li>
+				<li>ПРАЙС-ЛИСТ</li>
+				<li>КОНТАКТЫ</li>
+			</ul>
+			<div class="menu__social-media">
+				<img src="./images/social-media/github.png" />
+				<img src="./images/social-media/instagram.png" />
+				<img src="./images/social-media/facebook.png" />
+			</div>
+		</div>
+		<div class="overlay" id="overlay"></div>
+
+		<main class="main">
+			<div class="about_me">
+				<div class="about_me__container">
+					<div class="about_me__circle"></div>
+					<p>Меня зовут Александра Смит</p>
+					<h1>Я web-разработчик из города Москва</h1>
+					<div class="about_me__actions">
+						<button>Портфолио</button>
+						<a>Про меня</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="benefit">
+				<div class="benefit__container">
+					<div class="benefit__circle"></div>
+					<p class="benefit__experience">Опыт</p>
+					<h1 class="benefit__title">Чем я буду полезен</h1>
+					<div class="benefit__line"></div>
+
+					<div class="benefit__columns" id="benefitСolumns">
+						<div class="benefit__resume-group">
+							<div class="benefit__resume-columns">
+								<div class="benefit__line-group">
+									<div class="benefit__line-vertical">
+										<div
+											class="benefit__line-horizontal top"
+										></div>
+										<div class="benefit__line-circle"></div>
+										<div
+											class="benefit__line-horizontal bottom"
+										></div>
+									</div>
+								</div>
+
+								<div
+									class="benefit__items"
+									id="left_benefit_items"
+								>
+									<h2 class="benefit__resume-group-title">
+										Образование
+									</h2>
+								</div>
+							</div>
+						</div>
+						<div class="benefit__resume-group">
+							<div class="benefit__resume-columns">
+								<div class="benefit__line-group">
+									<div class="benefit__line-vertical">
+										<div
+											class="benefit__line-horizontal top"
+										></div>
+										<div class="benefit__line-circle"></div>
+										<div
+											class="benefit__line-horizontal bottom"
+										></div>
+									</div>
+								</div>
+								<div
+									class="benefit__items"
+									id="right_benefit_items"
+								>
+									<h2 class="benefit__resume-group-title">
+										Опыт работы
+									</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="contacts">
+				<div class="contacts__container">
+					<img
+						class="contacts__photo"
+						src="./images/contacts/contacts-image.jpeg"
+					/>
+
+					<div class="contacts__info">
+						<div class="contacts__circle"></div>
+						<p class="contacts__info-title">Контакты</p>
+						<h1 class="contacts__info-connect">
+							Свяжитесь со мной
+						</h1>
+						<div class="contacts__line"></div>
+						<p class="contacts__info-way">
+							Любым удобным для вас способом
+						</p>
+						<div class="contacts__icons">
+							<img
+								src="./images/social-media/facebook.png"
+								class="contacts__icon"
+							/>
+							<img
+								src="./images/social-media/Telegram.png"
+								class="contacts__icon"
+							/>
+							<img
+								src="./images/social-media/instagram.png"
+								class="contacts__icon"
+							/>
+						</div>
+						<p class="contacts__info-offer">
+							Или оставьте ваши данные и я сам вам напишу:
+						</p>
+						<form class="contacts__form">
+							<div class="contacts__form-container">
+								<div>
+									<fieldset class="contacts__form-fieldset">
+										<legend class="contacts__form-legend">
+											Ваше имя
+										</legend>
+										<input
+											type="text"
+											id="name"
+											name="name"
+											class="contacts__form-input"
+											required
+										/>
+									</fieldset>
+									<div class="error" id="name_error"></div>
+								</div>
+								<div>
+									<fieldset class="contacts__form-fieldset">
+										<legend class="contacts__form-legend">
+											Ваша почта
+										</legend>
+										<input
+											type="text"
+											class="contacts__form-input"
+											id="email"
+											name="email"
+											required
+										/>
+									</fieldset>
+									<div class="error" id="email_error"></div>
+								</div>
+							</div>
+							<div class="contacts__form-message">
+								<fieldset>
+									<legend class="contacts__form-legend">
+										Ваше сообщение
+									</legend>
+									<textarea
+										id="message"
+										name="message"
+										required
+									></textarea>
+								</fieldset>
+								<div class="error" id="message_error"></div>
+							</div>
+
+							<button
+								class="contacts__form-send-message"
+								type="submit"
+							>
+								Отправить сообщение
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script src="./dist/open-menu/open-menu.js"></script>
+		<script src="./dist/fibonacci/fibonacci.js"></script>
+		<script src="./dist/validation/validation.js"></script>
+		<script
+			type="module"
+			src="./dist/render-benefits/render-benefits.js"
+		></script>
+	</body>
+</html>

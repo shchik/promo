@@ -1,0 +1,60 @@
+.promo {
+  position: absolute;
+  height: 90vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+.promo__background-image {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -10vh;
+  bottom: 0;
+  background-image: url("../../images/promo-images/girl.jpeg");
+  background-position: top;
+}
+.promo__open-menu {
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  width: 36px;
+  cursor: pointer;
+}
+.promo__social-media {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  position: absolute;
+  top: 65%;
+  left: 1%;
+}
+.promo__social-media p {
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+.promo__social-media-line {
+  width: 70px;
+  height: 2px;
+  background-color: black;
+}
+.promo__social-media-examples img {
+  width: 20px;
+  margin-right: 0.5rem;
+}
+@media (max-width: 480px) {
+  .promo__social-media {
+    display: none;
+  }
+  .promo__background-image {
+    position: absolute;
+    top: 0vh;
+    background-position: 60% 10%;
+  }
+}
+
+/*# sourceMappingURL=promo.css.map */
